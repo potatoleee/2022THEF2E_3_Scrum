@@ -15,10 +15,16 @@
     top: 0;
     left: 0;
     background-color: $primary;
+    &::after{
+        position: absolute;
+        content: "";
+        top: 0;
+        right: -44px;
+        background-image: url("../images/Rocket.svg");
+        width: 76px;
+        height: 48px;
+    }
 }
 .w-10{
     width: 10%;
-}
-.left-8{
-    left: 8%;
 }

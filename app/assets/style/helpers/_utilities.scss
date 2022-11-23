@@ -130,6 +130,7 @@ $utilities: map-merge(
           5n: 20px,
           8n: 32px,
           12n: 48px,
+          16n: 64px,
           25: 25%,
           60: 60%,
           50: 50%,
@@ -151,6 +152,7 @@ $utilities: map-merge(
                 values: map-merge(
                 map-get(map-get($utilities, "width"), "values"),
                 ( 
+                  0: 0,
                   1 :1px,
                   2n: 8px,
                   3n: 12px,
@@ -158,6 +160,7 @@ $utilities: map-merge(
                   8n: 32px,
                   10n :40px,
                   12n: 48px,
+                  16n: 64px,
                   17n: 68px,
                   20n: 80px,
                   22n: 88px,
@@ -361,6 +364,13 @@ $utilities: map-merge(
         sm: $box-shadow-sm,
         lg: $box-shadow-lg,
         none: none,
+      )
+    ),
+    "text-shadow": (
+      property: text-shadow,
+      class: text-shadow,
+      values: (
+        null: 2px 2px 0px  rgba(0, 0, 0, 1),
       )
     ),
           

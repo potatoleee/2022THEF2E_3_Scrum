@@ -2,8 +2,69 @@
 title: scrum 
 layout: ./app/layout.ejs
 engine: ejs
-current: index
+current: role
+barWidth: w-10
+
 ---
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2">
+      <img src="./assets/images/PO_head_lookrightx0.5.svg" alt="">
+    </div>
+    <div class="col-lg-10">
+      <div class="bg-secondary-30 d-flex py-4 ps-8">
+        <div class="me-8">
+          <p class="fs-4 mb-7">請試著把需求放到產品待辦清單，並調整待辦的優先度順序。</p>
+          <p class="fs-4">我們公司也推薦使用 Jira 來做任務的管理呢！</p>
+        </div>
+        <img src="./assets/images/logo-gradient-white-jira 1@2x.svg" alt="">
+      </div>
+    </div>
+  </div>
+
+  
+</div>
+
+<!-- 產品待辦清單 start-->
+<div class="container bg-dark-10">
+  <div class="row">
+    <!-- 卡片待辦區 start-->
+    <div class="col-lg-6">
+      <h1>產品代辦清單 Product Backlog</h1>
+      <div class="candidate ">
+        <!-- 實現放置的區塊(container) -->
+  
+        <p class="draggble" draggable="true" data-id="1">
+          會員系統(登入、註冊、權限管理)
+        </p>
+        <!-- //加入draggable="true" 來實現拖曳 -->
+        <p class="draggble" draggable="true" data-id="2">
+          應徵者的線上履歷編輯器
+        </p>
+        <p class="draggble" draggable="true" data-id="3">
+          前台職缺列表(職缺詳細內容、點選可發送應徵意願)
+        </p>
+        <p class="draggble" draggable="true" data-id="4">
+          後台職缺管理功能(資訊上下架、顯示應徵者資料)
+        </p>
+      </div>
+    </div>
+    <!-- 卡片待辦區 end-->
+    <!-- 卡片放置區 start-->
+    <div class="col-lg-6 d-flex">
+      <div class="d-flex flex-column justify-content-between bg-gray-60">
+        <p class="fs-4 vertical-rl">優先度高</p>
+        <p class="fs-4 vertical-rl">優先度低</p>
+      </div>
+      <div class="productBacklog bg-primary">
+        <!-- //實現放置的區塊(container) -->
+      </div>
+  
+    </div>
+    <!-- 卡片放置區 end-->
+  </div>
+</div>
+<!-- 產品待辦清單 end-->
 
 <div class="message"></div>
 <div class="container">
