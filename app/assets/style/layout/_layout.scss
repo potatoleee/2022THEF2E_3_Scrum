@@ -1,0 +1,24 @@
+.header{
+    position: relative;
+
+    &__rocket{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+}
+.progressBar{
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: 0;
+    background-color: $primary;
+}
+.w-10{
+    width: 10%;
+}
+.left-8{
+    left: 8%;
+}

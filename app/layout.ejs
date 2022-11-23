@@ -11,12 +11,21 @@
   </head>
 
   <body>
-   
+    <header class="header">
+      <div class="progressBar  <%- barWidth %> "></div>
+      <div class="bg-gray-70 h-8n"></div>
+      <div class="bg-black h-4n opacity-40"></div>
+      <img class="header__rocket <%- rocketPosition %> " src="./assets/images/Rocket.svg" alt="">
+    </header>
 
-    <%- contents %>
+    <main>
+      <%- contents %>
+    </main>
 
-    <footer class="footer">
-      footer
+    <footer class="footer bg-primary-30 py-2">
+      <p class="text-center fs-8 opacity-100">
+        2022 F2E 4th week3 Program:Potato Lee / Design:Coral
+      </p>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"></script>
     <script src="./assets/js/vendors.js"></script>

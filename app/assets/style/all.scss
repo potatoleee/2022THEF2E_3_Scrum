@@ -11,5 +11,9 @@
 
 @import './base/base';
 @import './base/typography';
+@import './components/button';
 
-@import './layout/index.scss';
+@import './layout/layout';
+
+@import './pages/index';
+@import './pages/product_dialog';

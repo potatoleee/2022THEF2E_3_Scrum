@@ -1,0 +1,30 @@
+
+
+
+.draggble {
+    padding: 1rem;
+    border: 1px solid black;
+  }
+  .dropContainer {
+    display: flex;
+    justify-content: space-around;
+    // background-image: url("./images/pad_2垂直.svg");
+    // background-repeat: no-repeat;
+    // background-size: cover;
+  }
+  .productBacklog {
+    height: 300px;
+  }
+  .message {
+    font-size: 20px;
+  }
+  .messageWorng {
+    color: red;
+  }
+  .messageCorrect {
+    color: green;
+  }
+  .candidate {
+    min-height: 410px;
+    min-width: 100px;
+  }

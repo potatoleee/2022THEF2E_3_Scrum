@@ -1,0 +1,38 @@
+---
+title: scrum 
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+
+<div class="message"></div>
+<div class="container">
+  <div class="dropContainer">
+    <div class="candidate container">
+      <!-- 實現放置的區塊(container) -->
+
+      <p class="draggble" draggable="true" data-id="1">
+        會員系統(登入、註冊、權限管理)
+      </p>
+      <!-- //加入draggable="true" 來實現拖曳 -->
+      <p class="draggble" draggable="true" data-id="2">
+        應徵者的線上履歷編輯器
+      </p>
+      <p class="draggble" draggable="true" data-id="3">
+        前台職缺列表(職缺詳細內容、點選可發送應徵意願)
+      </p>
+      <p class="draggble" draggable="true" data-id="4">
+        後台職缺管理功能(資訊上下架、顯示應徵者資料)
+      </p>
+    </div>
+
+    <div class="container">
+      <p>優先度高</p>
+
+      <div class="productBacklog">
+        <!-- //實現放置的區塊(container) -->
+      </div>
+      <p>優先度低</p>
+    </div>
+  </div>
+</div>
