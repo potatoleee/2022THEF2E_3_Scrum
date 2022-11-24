@@ -6,14 +6,6 @@
 
 $utilities: map-merge(
     $utilities,(
-      "position": map-merge(
-        map-get($utilities,"position"),
-        (
-          responsive: true,
-          class: pos,
-        )
-      ),
-     
       "z-index": (
         property: z-index,
         responsive: true,
@@ -371,6 +363,13 @@ $utilities: map-merge(
       class: text-shadow,
       values: (
         null: 2px 2px 0px  rgba(0, 0, 0, 1),
+      )
+    ),
+    "text-decoration": (
+      property: text-decoration,
+      class: text-decoration,
+      values: (
+        underline: underline,
       )
     ),
           

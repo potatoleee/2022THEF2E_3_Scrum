@@ -1,28 +1,35 @@
 
 
 
-.draggble {
-    padding: 1rem;
-    border: 1px solid black;
-  }
   .dropContainer {
     display: flex;
     justify-content: space-around;
   }
   .productBacklog {
-    height: 500px;
+    min-height: 512px;
     width: 100%;
   }
   .message {
     font-size: 20px;
   }
-  .messageWorng {
+  .messageWrong {
     color: red;
   }
   .messageCorrect {
     color: green;
   }
-  .candidate {
-    min-height: 410px;
-    min-width: 100px;
-  }
+  
+
+  .modal__test--ok{
+    display: none;
+    &.open{
+        display: flex;
+    }
+}
+
+.modal__test--wrong{
+    display: none;
+    &.open{
+        display: flex;
+    }
+}

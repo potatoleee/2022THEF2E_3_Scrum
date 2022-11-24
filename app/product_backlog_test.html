@@ -6,7 +6,7 @@ current: role
 barWidth: w-10
 
 ---
-<div class="container">
+<div class="container mt-11 mb-12">
   <div class="row">
     <div class="col-lg-2">
       <img src="./assets/images/PO_head_lookrightx0.5.svg" alt="">
@@ -26,37 +26,39 @@ barWidth: w-10
 </div>
 
 <!-- 產品待辦清單 start-->
-<div class="container bg-dark-10">
+<div class="container bg-dark-10 mb-11">
   <div class="row">
     <!-- 卡片待辦區 start-->
-    <div class="col-lg-6">
-      <h1>產品代辦清單 Product Backlog</h1>
-      <div class="candidate ">
+    <div class="col-lg-6 py-4">
+      <h1 class="mb-6 d-flex align-items-center gap-4">產品代辦清單 <span class="fs-4">Product Backlog</span></h1>
+      <div class="candidate d-flex flex-column gap-6">
         <!-- 實現放置的區塊(container) -->
-  
-        <p class="draggble" draggable="true" data-id="1">
-          會員系統(登入、註冊、權限管理)
+        <p class="draggble border border-8 border-secondary fs-4 py-4 px-8" draggable="true" data-id="1">
+          後台職缺管理功能<br><span class="fs-8">資訊上下架、顯示應徵者資料</span>
         </p>
-        <!-- //加入draggable="true" 來實現拖曳 -->
-        <p class="draggble" draggable="true" data-id="2">
+        <p class="draggble border border-8 border-secondary fs-4 py-4 px-8" draggable="true" data-id="2">
+          前台職缺列表<br><span class="fs-8">職缺詳細內容、點選可發送應徵意願</span>
+        </p>
+        <p class="draggble border border-8 border-secondary fs-4 py-4 px-8" draggable="true" data-id="3">
           應徵者的線上履歷編輯器
         </p>
-        <p class="draggble" draggable="true" data-id="3">
-          前台職缺列表(職缺詳細內容、點選可發送應徵意願)
+        <p class="draggble border border-8 border-secondary fs-4 py-4 px-8" draggable="true" data-id="4">
+          會員系統<br><span class="fs-8">登入、註冊、權限管理</span>
         </p>
-        <p class="draggble" draggable="true" data-id="4">
-          後台職缺管理功能(資訊上下架、顯示應徵者資料)
-        </p>
+        <!-- //加入draggable="true" 來實現拖曳 -->
+        
+       
+       
       </div>
     </div>
     <!-- 卡片待辦區 end-->
     <!-- 卡片放置區 start-->
     <div class="col-lg-6 d-flex">
-      <div class="d-flex flex-column justify-content-between bg-gray-60">
+      <div class="d-flex flex-column justify-content-between bg-gray-60 px-5 py-4">
         <p class="fs-4 vertical-rl">優先度高</p>
         <p class="fs-4 vertical-rl">優先度低</p>
       </div>
-      <div class="productBacklog bg-primary">
+      <div class="productBacklog ps-7 d-flex flex-column gap-6 py-6">
         <!-- //實現放置的區塊(container) -->
       </div>
   
@@ -67,33 +69,36 @@ barWidth: w-10
 <!-- 產品待辦清單 end-->
 
 <div class="message"></div>
-<div class="container">
-  <div class="dropContainer">
-    <div class="candidate container">
-      <!-- 實現放置的區塊(container) -->
 
-      <p class="draggble" draggable="true" data-id="1">
-        會員系統(登入、註冊、權限管理)
-      </p>
-      <!-- //加入draggable="true" 來實現拖曳 -->
-      <p class="draggble" draggable="true" data-id="2">
-        應徵者的線上履歷編輯器
-      </p>
-      <p class="draggble" draggable="true" data-id="3">
-        前台職缺列表(職缺詳細內容、點選可發送應徵意願)
-      </p>
-      <p class="draggble" draggable="true" data-id="4">
-        後台職缺管理功能(資訊上下架、顯示應徵者資料)
-      </p>
-    </div>
-
-    <div class="container">
-      <p>優先度高</p>
-
-      <div class="productBacklog">
-        <!-- //實現放置的區塊(container) -->
-      </div>
-      <p>優先度低</p>
-    </div>
+<div class="container d-flex justify-content-end mb-11">
+  <div>
+      <a class="btn btn-primary shadow rounded-0 p-7 me-8" href="index.html">
+          <img src="./assets/images/btn_arrow.svg" alt="">
+      </a>
+      <a href="#" class="btn btn-primary shadow rounded-0 p-7 fs-4 lh-sm text-white btn-deco text-shadow btnOk">我完成了！</a>
   </div>
 </div>
+
+<!-- 答對彈跳視窗 start -->
+<div class="flex-column align-items-center justify-content-center modal__test--ok position-fixed top-50 start-50 translate-middle w-100 h-100 bg-primary-30 ">
+  <img src="./assets/images/PO_head_lookright.svg" alt="">
+  <div>
+    <p class="fs-3"> 你做得非常好！</p>
+    <p class="fs-3">你已經能掌握基礎產品代辦清單的優先度排序</p>
+    <p class="fs-3">接下來再繼續挑戰吧！</p>
+  </div>
+  <a href="sprint_planning.html" class="btn btn-primary shadow rounded-0 p-7 fs-4 lh-sm text-white btn-deco text-shadow ">前往下個挑戰</a>
+</div>
+<!-- 答對彈跳視窗 end -->
+
+<!-- 答錯彈跳視窗 start -->
+<div class="flex-column align-items-center justify-content-center modal__test--wrong position-fixed top-50 start-50 translate-middle w-100 h-100 bg-primary-30 ">
+  <img src="./assets/images/PO_head_lookright.svg" alt="">
+  <div>
+    <p class="fs-3">順序可以再調整看看唷！</p>
+   
+  </div>
+  <a href="product_backlog_test.html" class="btn btn-primary shadow rounded-0 p-7 fs-4 lh-sm text-white btn-deco text-shadow ">再試看看</a>
+</div>
+<!-- 答錯彈跳視窗 end -->
+
