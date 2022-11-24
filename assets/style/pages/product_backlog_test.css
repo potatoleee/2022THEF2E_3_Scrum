@@ -1,0 +1,46 @@
+.dropContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.productBacklog {
+  min-height: 512px;
+  width: 100%;
+}
+
+.message {
+  font-size: 20px;
+}
+
+.messageWrong {
+  color: red;
+}
+
+.messageCorrect {
+  color: green;
+}
+
+.modal__test--ok {
+  display: none;
+}
+
+.modal__test--ok.open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal__test--wrong {
+  display: none;
+}
+
+.modal__test--wrong.open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/*# sourceMappingURL=product_backlog_test.css.map */
