@@ -72,6 +72,51 @@ function removeClass(el, className) {
 
 
 
+const backlogDOM = document.querySelector(
+  ".backlog-section .droppable-container"
+);
+const sprintDOM = document.querySelector(
+  ".sprint-section .droppable-container"
+);
+
+const backlogArr = [
+  { content: "前台職缺列表（職缺詳細內容、點選可發送應徵意願）", score: 5 },
+  { content: "應徵者的線上履歷編輯器", score: 13 },
+  { content: "會員系統（登入、註冊、權限管理）", score: 8 },
+  { content: "後台職缺管理功能（資訊上架、下架、顯示應徵者資料）", score: 8 }
+];
+
+let totalScore = 0;
+let totalScoreDOM = document.querySelector(".total-score");
+totalScoreDOM.textContent = totalScore;
+
+// 以map方式創造DOM node, 並塞入backlog的container
+backlogArr.map((ele) => {
+  let draggableCard = document.createElement("div");
+  draggableCard.setAttribute("data-score", ele.score);
+  draggableCard.setAttribute("draggable", "true");
+  draggableCard.classList.add("draggble");
+  draggableCard.textContent = ele.content;
+
+  let timeAvatar = document.createElement("div");
+  timeAvatar.classList.add("time-avatar");
+  timeAvatar.textContent = ele.score;
+
+  draggableCard.appendChild(timeAvatar);
+
+  backlogDOM.appendChild(draggableCard);
+});
+
+
+
+
+
+
+
+
+
+
+
 
 
 

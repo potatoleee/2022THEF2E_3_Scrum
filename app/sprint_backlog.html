@@ -1,0 +1,20 @@
+---
+title: scrum 
+layout: ./app/layout.ejs
+engine: ejs
+current: role
+barWidth: w-30
+---
+<div class="container">
+    <div class="backlog-section">
+      <h1>Backlog</h1>
+      <div class="droppable-container"></div>
+    </div>
+
+    <div class="sprint-section">
+      <h1>Sprint</h1>
+      <div class="droppable-container"></div>
+      <p>目前點數: <span class="total-score"></span></p>
+      <p class="warning-text hidden">點數已超出上限，請移除一些項目</p>
+    </div>
+  </div>

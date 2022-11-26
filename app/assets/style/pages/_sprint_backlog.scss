@@ -1,0 +1,47 @@
+.backlog-section,
+.sprint-section {
+  width: 50%;
+}
+
+.droppable-container {
+  background-color: #f5efe6;
+  min-height: 500px;
+}
+
+.draggble {
+  padding: 16px;
+  font-size: 1rem;
+  text-align: center;
+  background-color: #7895b2;
+  color: #e8dfca;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.time-avatar {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 999px;
+  background-color: #e38b29;
+  color: black;
+  position: absolute;
+  right: 5%;
+  top: -20%;
+}
+
+.warning-text {
+  color: red;
+}
+
+.hidden {
+  display: none;
+}
+/* .ghost {
+  opacity: 0.4;
+  background-color: yellow;
+  width: 10%;
+  text-align: center;
+} */
