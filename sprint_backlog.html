@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>scrum</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/style/all.css">
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="progressBar  w-30 "></div>
+      <div class="bg-gray-70 h-8n"></div>
+      <div class="bg-black h-4n opacity-40"></div>
+    </header>
+
+    <main>
+      <div class="container">
+    <div class="backlog-section">
+      <h1>Backlog</h1>
+      <div class="droppable-container"></div>
+    </div>
+
+    <div class="sprint-section">
+      <h1>Sprint</h1>
+      <div class="droppable-container"></div>
+      <p>目前點數: <span class="total-score"></span></p>
+      <p class="warning-text hidden">點數已超出上限，請移除一些項目</p>
+    </div>
+  </div>
+    </main>
+
+    <footer class="footer bg-primary-30 py-2">
+      <p class="text-center fs-8 opacity-100">
+        2022 F2E 4th week3 Program:Potato Lee / Design:Coral
+      </p>
+    </footer>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/vendors.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"></script>
+    <script src="./assets/js/all.js"></script>
+  </body>
+
+</html>

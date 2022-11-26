@@ -59,4 +59,36 @@ function removeClass(el, className) {
     el.className = el.className.replace(reg, ' ');
   }
 }
+
+var backlogDOM = document.querySelector(".backlog-section .droppable-container");
+var sprintDOM = document.querySelector(".sprint-section .droppable-container");
+var backlogArr = [{
+  content: "前台職缺列表（職缺詳細內容、點選可發送應徵意願）",
+  score: 5
+}, {
+  content: "應徵者的線上履歷編輯器",
+  score: 13
+}, {
+  content: "會員系統（登入、註冊、權限管理）",
+  score: 8
+}, {
+  content: "後台職缺管理功能（資訊上架、下架、顯示應徵者資料）",
+  score: 8
+}];
+var totalScore = 0;
+var totalScoreDOM = document.querySelector(".total-score");
+totalScoreDOM.textContent = totalScore; // 以map方式創造DOM node, 並塞入backlog的container
+
+backlogArr.map(function (ele) {
+  var draggableCard = document.createElement("div");
+  draggableCard.setAttribute("data-score", ele.score);
+  draggableCard.setAttribute("draggable", "true");
+  draggableCard.classList.add("draggble");
+  draggableCard.textContent = ele.content;
+  var timeAvatar = document.createElement("div");
+  timeAvatar.classList.add("time-avatar");
+  timeAvatar.textContent = ele.score;
+  draggableCard.appendChild(timeAvatar);
+  backlogDOM.appendChild(draggableCard);
+});
 //# sourceMappingURL=all.js.map
