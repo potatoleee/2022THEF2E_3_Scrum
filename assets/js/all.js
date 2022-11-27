@@ -58,10 +58,13 @@ function removeClass(el, className) {
     var reg = new RegExp('(\\s|^)' + className + '(\\s|$)');
     el.className = el.className.replace(reg, ' ');
   }
-}
+} //敏捷分數計算
+
 
 var backlogDOM = document.querySelector(".backlog-section .droppable-container");
+console.log(backlogDOM);
 var sprintDOM = document.querySelector(".sprint-section .droppable-container");
+console.log(sprintDOM);
 var backlogArr = [{
   content: "前台職缺列表（職缺詳細內容、點選可發送應徵意願）",
   score: 5
@@ -77,7 +80,7 @@ var backlogArr = [{
 }];
 var totalScore = 0;
 var totalScoreDOM = document.querySelector(".total-score");
-totalScoreDOM.textContent = totalScore; // 以map方式創造DOM node, 並塞入backlog的container
+totalScoreDOM.textContent = totalScore; // // 以map方式創造DOM node, 並塞入backlog的container
 
 backlogArr.map(function (ele) {
   var draggableCard = document.createElement("div");
@@ -91,4 +94,43 @@ backlogArr.map(function (ele) {
   draggableCard.appendChild(timeAvatar);
   backlogDOM.appendChild(draggableCard);
 });
+var sprintSortableObj = Sortable.create(sprintDOM, {
+  group: "dnd",
+  animation: 10,
+  dataIdAttr: "data-score",
+  onEnd: function onEnd(event) {
+    // 更新t// 更新totalSccore
+    totalScore = sprintSortableObj.toArray().map(function (ele) {
+      return parseInt(ele, 10);
+    }).reduce(function (a, b) {
+      return a + b;
+    }, 0);
+    totalScoreDOM.textContent = totalScore;
+    var warningTextDOM = document.querySelector(".warning-text");
+    warningTextDOM.classList.add("hidden");
+
+    if (totalScore > 20) {
+      warningTextDOM.classList.remove("hidden");
+    }
+  }
+});
+var backlogSortableObj = Sortable.create(backlogDOM, {
+  group: "dnd",
+  animation: 10,
+  dataIdAttr: "data-score",
+  onEnd: function onEnd(event) {
+    totalScore = sprintSortableObj.toArray().map(function (ele) {
+      return parseInt(ele, 10);
+    }).reduce(function (a, b) {
+      return a + b;
+    }, 0);
+    totalScoreDOM.textContent = totalScore;
+    var warningTextDOM = document.querySelector(".warning-text");
+    warningTextDOM.classList.add("hidden");
+
+    if (totalScore > 20) {
+      warningTextDOM.classList.remove("hidden");
+    }
+  }
+}); //敏捷分數計算
 //# sourceMappingURL=all.js.map
