@@ -26,7 +26,7 @@ const dragGame = () =>{
       const answerrr = isArrEqual(order, answerAry); // true
       if (answerrr === true) {
         answerMessage.innerHTML =
-          "<p class='messageCorrect'>" + "順序正確" + "</p>";
+          "<p class='messageCorrect'>" + "順序正確！" + "</p>";
           // 答對彈跳視窗 start
           const modalTestOk = document.querySelector(".modal__test--ok");
           addClass(btnOk,"bg-secondary")
@@ -43,7 +43,6 @@ const dragGame = () =>{
           btnOk.addEventListener("click",function(e){
           e.preventDefault();
           // addClass(modalTestWrong,"open");
-          console.log("答錯了");
           })
         // 答錯彈跳視窗 end
 
