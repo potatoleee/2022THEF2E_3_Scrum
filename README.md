@@ -1,6 +1,6 @@
 # 2022 THEF2E Week3 - Scrum 新手村
 
-![image](https://github.com/potatoleee/2022THEF2E_3_Scrum/blob/main/assets/images/cover.svg)
+![image](https://github.com/potatoleee/2022THEF2E_3_Scrum/blob/main/app/assets/images/cover.svg)
 
 **UIUX Design : [Coral](https://2022.thef2e.com/users/12061549261449593305)**
 
