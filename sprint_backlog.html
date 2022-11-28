@@ -18,20 +18,42 @@
     </header>
 
     <main>
-      <div class="container d-flex">
-  <div class="backlog-section">
-    <h1>Backlog</h1>
+      <div class="container mb-8">
+  <div class="row">
+    <div class="col-lg-6 ">
+        <!-- 代辦清單 start -->
+  <div class="backlog-section minh-100 p-4 bg-dark-10">
+    <h2 class="fs-3 mb-9">產品代辦清單 Product Backlog</h2>
     <div class="droppable-container">
     </div>
   </div>
-
-  <div class="sprint-section">
-    <h1>Sprint</h1>
+  <!-- 代辦清單 end -->
+    </div>
+    <div class="col-lg-6 ">
+          <!-- 開發A組代辦清單 start -->
+  <div class="sprint-section p-4 bg-dark-10">
+    <div class="d-flex justify-content-between align-items-end mb-9">
+      <h1 class="fs-3">開發 A 組的短衝待辦清單</h1>
+      <p class="text-secondary-yellow"><span class="total-score"></span>點 / 5人</p>
+    </div>
     <div class="droppable-container"></div>
-    <p>目前點數: <span class="total-score"></span></p>
-    <p class="warning-text hidden">點數已超出上限，請移除一些項目</p>
+    <p class="warning-text hidden">點數已超出上限，請移除一些項目ლ(ﾟдﾟლ)</p>
+  </div>
+  <!-- 開發A組代辦清單 end -->
+    </div>
   </div>
 </div>
+
+<!-- 按鈕 start-->
+<div class="container d-flex justify-content-end mb-11">
+  <div>
+      <a class="btn btn-primary shadow rounded-0 p-7 me-8" href="sprint_planning.html">
+          <img src="./assets/images/btn_arrow.svg" alt="">
+      </a>
+      <a href="sprint_explain.html" class="btn btn-primary shadow rounded-0 p-7 fs-4 lh-sm text-white btn-deco text-shadow btnOk">準備好了!開始sprint</a>
+  </div>
+</div>
+<!-- 按鈕 end-->
     </main>
 
     <footer class="footer bg-primary-30 py-2">

@@ -12853,6 +12853,10 @@ fieldset:disabled .btn {
   text-shadow: 2px 2px 0px black !important;
 }
 
+.list-style-disc {
+  list-style: disc !important;
+}
+
 @media (min-width: 576px) {
   .float-sm-start {
     float: left !important;
@@ -22399,8 +22403,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p {
   margin: 0;
 }
 
-ol,
-ul {
+ol, ul, li {
   list-style: none;
   padding-left: 0;
   margin: 0;
@@ -22438,6 +22441,15 @@ sub {
   -webkit-transition: all .3s;
   -o-transition: all .3s;
   transition: all .3s;
+}
+
+.nav-pills .nav-link {
+  color: white;
+}
+
+.nav-pills .nav-link.active {
+  color: black;
+  background: #FFF205;
 }
 
 .header {
@@ -22609,48 +22621,46 @@ sub {
   display: flex;
 }
 
-.backlog-section,
 .sprint-section {
-  width: 50%;
+  min-height: 712px;
 }
 
 .droppable-container {
-  background-color: #f5efe6;
-  min-height: 500px;
+  min-height: 550px;
 }
 
 .draggble {
   padding: 16px;
-  font-size: 1rem;
-  text-align: center;
-  background-color: #7895b2;
-  color: #e8dfca;
+  font-size: 24px;
+  border: 8px solid #FFF205;
   margin-bottom: 20px;
-  position: relative;
 }
 
 .time-avatar {
-  width: 24px;
-  height: 24px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-radius: 999px;
-  background-color: #e38b29;
-  color: black;
-  position: absolute;
-  right: 5%;
-  top: -20%;
+  font-size: 12px;
+  color: #FFF205;
+}
+
+.time-avatar li {
+  width: 8px;
+  height: 8px;
+  background: #FFF205;
+  margin-left: 4px;
+}
+
+.boxes {
+  width: 14px;
+  height: 14px;
 }
 
 .warning-text {
-  color: red;
+  color: #FFF205;
 }
 
 .hidden {
