@@ -25,7 +25,7 @@ var dragGame = function dragGame() {
       var answerrr = isArrEqual(order, answerAry); // true
 
       if (answerrr === true) {
-        answerMessage.innerHTML = "<p class='messageCorrect'>" + "順序正確" + "</p>"; // 答對彈跳視窗 start
+        answerMessage.innerHTML = "<p class='messageCorrect'>" + "順序正確！" + "</p>"; // 答對彈跳視窗 start
 
         var modalTestOk = document.querySelector(".modal__test--ok");
         addClass(btnOk, "bg-secondary");
@@ -39,8 +39,6 @@ var dragGame = function dragGame() {
         var modalTestWrong = document.querySelector(".modal__test--wrong");
         btnOk.addEventListener("click", function (e) {
           e.preventDefault(); // addClass(modalTestWrong,"open");
-
-          console.log("答錯了");
         }); // 答錯彈跳視窗 end
       }
     }

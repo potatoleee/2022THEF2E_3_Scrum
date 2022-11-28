@@ -22594,11 +22594,11 @@ sub {
 }
 
 .messageWrong {
-  color: red;
+  color: #0693E3;
 }
 
 .messageCorrect {
-  color: green;
+  color: #FF52A5;
 }
 
 .modal__test--ok {
