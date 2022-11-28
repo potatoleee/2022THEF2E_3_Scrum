@@ -372,6 +372,13 @@ $utilities: map-merge(
         underline: underline,
       )
     ),
+    "list-style": (
+      property: list-style,
+      class: list-style,
+      values: (
+        disc: disc,
+      )
+    ),
           
       
    

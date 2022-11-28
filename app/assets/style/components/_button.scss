@@ -16,3 +16,12 @@
         transition: all .3s ;
     }
 }
+.nav-pills{
+    .nav-link{
+        color: white;
+        &.active{
+            color:black;
+            background: $secondary-yellow;
+        }
+    }
+}

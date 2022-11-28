@@ -1,7 +1,9 @@
+const candidateDOM = document.querySelector(".candidate");
+const backlogDOM = document.querySelector(".backlog-section .droppable-container");
+
 //代辦清單start
 const dragGame = () =>{
 
-  const candidateDOM = document.querySelector(".candidate");
   const productBacklogDOM = document.querySelector(".productBacklog");
   const btnOk = document.querySelector(".btnOk");
   const isArrEqual = (arr1, arr2) => {
@@ -40,7 +42,7 @@ const dragGame = () =>{
           const modalTestWrong = document.querySelector(".modal__test--wrong");
           btnOk.addEventListener("click",function(e){
           e.preventDefault();
-          addClass(modalTestWrong,"open");
+          // addClass(modalTestWrong,"open");
           console.log("答錯了");
           })
         // 答錯彈跳視窗 end
@@ -79,17 +81,27 @@ function removeClass(el, className) {
 //敏捷分數計算 start
 const sprintGame = () =>{
 
-const backlogDOM = document.querySelector(".backlog-section .droppable-container");
+
 console.log(backlogDOM);
 const sprintDOM = document.querySelector(".sprint-section .droppable-container");
 console.log(sprintDOM);
 
 
 const backlogArr = [
-  { content: "前台職缺列表（職缺詳細內容、點選可發送應徵意願）", score: 5 },
-  { content: "應徵者的線上履歷編輯器", score: 13 },
-  { content: "會員系統（登入、註冊、權限管理）", score: 8 },
-  { content: "後台職缺管理功能（資訊上架、下架、顯示應徵者資料）", score: 8 }
+  { title:"前台職缺列表",
+    content: "職缺詳細內容、點選可發送應徵意願",
+    score: "5" },
+
+  { title: "應徵者的線上履歷編輯器",
+    score: "13" },
+
+  { title: "會員系統",
+    content: "登入、註冊、權限管理",
+    score: "8" },
+
+  { title:"後台職缺管理功能",
+    content: "資訊上架、下架、顯示應徵者資料",
+    score: "8" }
 ];
 
 let totalScore = 0;
@@ -99,18 +111,28 @@ totalScoreDOM.textContent = totalScore;
 // // 以map方式創造DOM node, 並塞入backlog的container
 backlogArr.map((ele) => {
   let draggableCard = document.createElement("div");
+  let draggableText = document.createElement("p");
   draggableCard.setAttribute("data-score", ele.score);
   draggableCard.setAttribute("draggable", "true");
   draggableCard.classList.add("draggble");
-  draggableCard.textContent = ele.content;
-
-  let timeAvatar = document.createElement("div");
+  draggableCard.textContent = ele.title;
+  draggableCard.appendChild(draggableText);
+  draggableText.textContent = ele.content;
+  draggableText.classList.add("fs-8","my-2")
+  let timeAvatar = document.createElement("ul");
   timeAvatar.classList.add("time-avatar");
-  timeAvatar.textContent = ele.score;
+  timeAvatar.textContent = ele.score + ' 點';
+  // timeAvatar.textContent = ele.score;
 
   draggableCard.appendChild(timeAvatar);
 
   backlogDOM.appendChild(draggableCard);
+
+  //產出對應數量li
+  for (let i = 0; i < ele.score ; i++) {
+    let boxes = document.createElement("li")
+    timeAvatar.appendChild(boxes)
+  }
 });
 
 let sprintSortableObj = Sortable.create(sprintDOM, {
@@ -158,9 +180,14 @@ let backlogSortableObj = Sortable.create(backlogDOM, {
 
 }//敏捷分數計算 end
 
+if(candidateDOM){
+  dragGame()
+}
 
-dragGame()
-sprintGame()
+if(backlogDOM){
+  sprintGame()
+}
+
 
 
 

@@ -1,0 +1,81 @@
+---
+title: scrum 
+layout: ./app/layout.ejs
+engine: ejs
+current: role
+barWidth: w-60
+---
+
+<div class="container mt-11">
+    <div class="row mb-7">
+        <div class="col-lg-2">
+            <img class="mb-2" src="./assets/images/RD_head_lookrightx0.5.svg" alt="">
+            <h2 class="fs-4 text-center">開發團隊</h2>
+        </div>
+        <div class="col-lg-10">
+            <p class="fs-4 py-4 px-8 bg-secondary-yellow-30 mb-2 lh-lg">等等等等等，你應該還不知道什麼是 Sprint 吧？讓我先為你介紹一下～ 仔細聽好唷，等等會考考你！</p>
+            <p class="fs-4 py-4 px-8 bg-secondary-yellow-30 mb-2 lh-lg">Sprint 是一個短衝，如同前面敏捷教練所提到的，一次sprint一次sprint週期為2周。開發團隊會在這期間執行開發。在這段期間內，開發團隊舉辦每日站立會議（Daily Scrum） ，追蹤成員間的工作狀況。除了每日站立會議，在 Sprint 的結束也會包含 短衝檢視會議（Sprint Review）、短衝自省會議（Sprint Retrospective）。</p>
+        </div>
+    </div>
+
+    <ul class="nav nav-pills nav-fill mb-3 bg-dark-10 p-4" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active fs-3" id="pills-dailyScrum-tab" data-bs-toggle="pill" data-bs-target="#pills-dailyScrum" type="button" role="tab" aria-controls="pills-dailyScrum" aria-selected="true">每日站立會議 <span class="d-block fs-4">Daily Scrum</span></button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link  fs-3" id="pills-sprintReview-tab" data-bs-toggle="pill" data-bs-target="#pills-sprintReview" type="button" role="tab" aria-controls="pills-sprintReview" aria-selected="true">短衝檢視會議<span class="d-block fs-4">Sprint Review</span></button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link  fs-3" id="pills-retrospective-tab" data-bs-toggle="pill" data-bs-target="#pills-retrospective" type="button" role="tab" aria-controls="pills-retrospective" aria-selected="true">短衝自省會議<span class="d-block fs-4">Sprint Retrospective</span></button>
+        </li>
+    </ul>
+
+      <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active p-8" id="pills-dailyScrum" role="tabpanel" aria-labelledby="pills-dailyScrum-tab">
+           
+            <p class="fs-3 mb-6">
+                每天都要進行的會議，以 15 分鐘為限制
+            </p>
+            <ul class="fs-3 ps-8 mb-6">
+                <li class="list-style-disc ">昨天為團隊的短衝目標（Sprint Goal）做了那些進度</li>
+                <li class="list-style-disc ">今天我會如何準備來幫助團隊達到短衝目標</li>
+                <li class="list-style-disc ">過程中有遇到什麼問題、難題</li>
+            </ul>
+            <p class="fs-3">
+                透過團隊分享，追蹤大家的工作狀況。
+            </p>
+            
+        </div>
+        <div class="tab-pane fade p-8" id="pills-sprintReview" role="tabpanel" aria-labelledby="pills-sprintReview-tab">
+            <p class="fs-3 mb-6">
+                向利害關係人（Stakeholder）展示工作結果，蒐集使用回饋，分享市場反應，並一起討論下一步工作方向。
+            </p>
+            <p class="fs-3">
+                在短衝檢視會議過程，會取得使用者或利害關係人對於本次短衝增量的回饋數據或意見，討論哪些想法值得納入至產品待辦清單去實踐。
+            </p>    
+            
+        </div>
+        <div class="tab-pane fade p-8" id="pills-retrospective" role="tabpanel" aria-labelledby="pills-Retrospective-tab">
+            <p class="fs-3 mb-6">
+                團隊在自省會議裡，會共同回顧該短衝歷程發生的事情、好的地方、可以改進的地方。
+            </p>
+            <p class="fs-3 mb-6">
+                如何維持我們已有的成功經驗，優化工作流程、讓團隊有變得更好的機會。
+            </p>
+            <p class="fs-3">
+                推薦工具：<img class="d-inline" src="./assets/images/logo-gradient-white-confluence 1-1.svg" alt="">
+            </p>
+
+         
+        </div>
+      </div>
+
+      <div class="container d-flex justify-content-end mb-11">
+        <div>
+            <a class="btn btn-primary shadow rounded-0 p-7 me-8  btn-deco " href="product_backlog_test.html">
+                <img src="./assets/images/btn_arrow.svg" alt="">
+            </a>
+            <a href="sprint_backlog.html" class="btn btn-primary shadow rounded-0 p-7 fs-4 lh-sm text-white btn-deco text-shadow btnOk">我瞭解了</a>
+        </div>
+      </div>
+</div>

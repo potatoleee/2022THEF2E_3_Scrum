@@ -1,39 +1,39 @@
-.backlog-section,
+
 .sprint-section {
-  width: 50%;
+  min-height: 712px;
 }
 
 .droppable-container {
-  background-color: #f5efe6;
-  min-height: 500px;
+  min-height: 550px;
 }
 
 .draggble {
   padding: 16px;
-  font-size: 1rem;
-  text-align: center;
-  background-color: #7895b2;
-  color: #e8dfca;
+  font-size: 24px;
+  border: 8px solid $secondary-yellow;
   margin-bottom: 20px;
-  position: relative;
+
 }
 
 .time-avatar {
-  width: 24px;
-  height: 24px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  border-radius: 999px;
-  background-color: #e38b29;
-  color: black;
-  position: absolute;
-  right: 5%;
-  top: -20%;
-}
+  font-size: 12px;
+  color:  $secondary-yellow ;
 
+  li{
+    width: 8px;
+    height: 8px;
+    background: $secondary-yellow;
+    margin-left: 4px;
+  }
+}
+.boxes{
+  width: 14px;
+  height: 14px;
+}
 .warning-text {
-  color: red;
+  color: $secondary-yellow;
 }
 
 .hidden {
