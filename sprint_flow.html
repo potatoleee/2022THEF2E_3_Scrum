@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>scrum</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/style/all.css">
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="progressBar  w-70 "></div>
+      <div class="bg-gray-70 h-8n"></div>
+      <div class="bg-black h-4n opacity-40"></div>
+    </header>
+
+    <main>
+      <div class="stars"></div>
+      <div class="stars2"></div>
+      <div class="stars3"></div>
+      <div class="container mt-9">
+    <div class="row mb-7">
+        <div class="col-lg-2">
+            <img class="mb-2" src="./assets/images/RD_head_lookrightx0.5.svg" alt="">
+            <h2 class="fs-4 text-center">開發團隊</h2>
+        </div>
+        <div class="col-lg-10">
+            <p class="fs-4 py-4 px-8 bg-secondary-yellow-30 mb-2 lh-lg">那你來試試看，在這經典的 Scrum 流程圖中，這些流程分別代表哪一個會議呢？</p>
+            <p class="fs-4 py-4 px-8 bg-secondary-yellow-30 mb-2 lh-lg">請你試著把左下方三個方塊，拖拉至正確的位置上。</p>
+        </div>
+    </div>
+</div>
+
+<div class="container mb-7">
+    <div class="row bg-dark-10 align-items-center">
+        <div class="col-3 d-flex flex-column align-items-center">
+            <h2 class="fs-4 bg-secondary-yellow text-black py-3 px-4 ">產品待辦清單</h2>
+            <img class="mb-4" src="./assets/images/Arrow_down.svg" alt="">
+            <h2 class="fs-4 bg-secondary-yellow text-black py-3 px-4 ">短衝規劃</h2>
+            <img class="mb-4" src="./assets/images/Arrow_down.svg" alt="">
+            <div class="position-relative">
+                <h2 class="fs-4 bg-secondary-yellow text-black py-3 px-4 ">短衝待辦清單</h2>
+                <img class=" position-absolute top-0 end-m48" src="./assets/images/Arrow_right.svg" alt="">
+            </div>
+        </div>
+      
+        <div class="col-9">
+            <div class="sprintBacklog sprint ">
+                <div></div>
+                <div></div>
+                <div></div>
+                <!-- //實現放置的區塊(container) -->
+              </div>
+        </div>
+    </div>
+</div>
+
+<!-- 卡片待定區 start-->
+<div class="container">
+    <div class="sprintCard d-flex  gap-6">
+    <!-- 實現放置的區塊(container) -->
+    <p class="draggble border border-8 border-secondary-yellow fs-4 py-4 px-8" draggable="true" data-id="1">
+        短衝檢視會議<br><span class="fs-8">Sprint Review</span>
+    </p>
+    <p class="draggble border border-8 border-secondary-yellow fs-4 py-4 px-8" draggable="true" data-id="2">
+        短衝自省會議<br><span class="fs-8">Sprint Retrospective</span>
+    </p>
+    <p class="draggble border border-8 border-secondary-yellow fs-4 py-4 px-8" draggable="true" data-id="3">
+        每日站立會議<br><span class="fs-8">Daily Scrum</span>
+    </p>
+    <!-- //加入draggable="true" 來實現拖曳 -->
+    </div>
+</div>  
+<!-- 卡片待定區 end-->
+
+
+<!-- 按鈕 start-->
+<div class="container d-flex justify-content-end mb-11">
+    <div>
+        <a class="btn btn-primary shadow rounded-0 p-7 me-8" href="sprint_planning.html">
+            <img src="./assets/images/btn_arrow.svg" alt="">
+        </a>
+        <a href="sprint_explain.html" class="btn btn-primary shadow rounded-0 p-7 fs-4 lh-sm text-white btn-deco text-shadow btnOk">完成了</a>
+    </div>
+  </div>
+  <!-- 按鈕 end-->
+
+
+
+<!-- 答對彈跳視窗 start -->
+<div class="flex-column align-items-center justify-content-center modal__test--ok position-fixed top-50 start-50 translate-middle w-100 h-100 bg-primary-30 ">
+    <img src="./assets/images/PO_head_lookright.svg" alt="">
+    <div>
+      <p class="fs-3"> 你做得非常好！</p>
+      <p class="fs-3">你已經能掌握基礎產品代辦清單的優先度排序</p>
+      <p class="fs-3">接下來再繼續挑戰吧！</p>
+    </div>
+    <a href="sprint_planning.html" class="btn btn-primary shadow rounded-0 p-7 fs-4 lh-sm text-white btn-deco text-shadow ">前往下個挑戰</a>
+  </div>
+  <!-- 答對彈跳視窗 end -->
+  
+  <!-- 答錯彈跳視窗 start -->
+  <div class="flex-column align-items-center justify-content-center modal__test--wrong position-fixed top-50 start-50 translate-middle w-100 h-100 bg-primary-30 ">
+    <img src="./assets/images/PO_head_lookright.svg" alt="">
+    <div>
+      <p class="fs-3">順序可以再調整看看唷！</p>
+     
+    </div>
+    <a href="sprint_planning.html" class="btn btn-primary shadow rounded-0 p-7 fs-4 lh-sm text-white btn-deco text-shadow ">再試看看</a>
+  </div>
+  <!-- 答錯彈跳視窗 end -->
+    </main>
+
+    <footer class="footer bg-primary-30 py-2">
+      <p class="text-center fs-8 opacity-100">
+        2022 F2E 4th week3 Program:Potato Lee / Design:Coral
+      </p>
+    </footer>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/vendors.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"></script>
+    <script src="./assets/js/all.js"></script>
+  </body>
+
+</html>

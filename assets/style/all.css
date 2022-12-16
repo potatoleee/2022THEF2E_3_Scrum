@@ -9816,6 +9816,10 @@ fieldset:disabled .btn {
   position: sticky !important;
 }
 
+.top-m48 {
+  top: -48px !important;
+}
+
 .top-0 {
   top: 0 !important;
 }
@@ -9890,6 +9894,10 @@ fieldset:disabled .btn {
 
 .top-94 {
   top: 94px !important;
+}
+
+.bottom-m48 {
+  bottom: -48px !important;
 }
 
 .bottom-0 {
@@ -9968,6 +9976,10 @@ fieldset:disabled .btn {
   bottom: 94px !important;
 }
 
+.start-m48 {
+  left: -48px !important;
+}
+
 .start-0 {
   left: 0 !important;
 }
@@ -10042,6 +10054,10 @@ fieldset:disabled .btn {
 
 .start-94 {
   left: 94px !important;
+}
+
+.end-m48 {
+  right: -48px !important;
 }
 
 .end-0 {
@@ -22673,5 +22689,23 @@ sub {
   width: 10%;
   text-align: center;
 } */
+.sprintBacklog {
+  height: 412px;
+}
+
+.sprint {
+  margin-top: 100px;
+  background-image: url("../images/Sprint_flow.svg");
+  background-repeat: no-repeat;
+}
+
+.sprint h3, .sprint .h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
 
 /*# sourceMappingURL=all.css.map */

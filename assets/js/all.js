@@ -150,7 +150,51 @@ var sprintGame = function sprintGame() {
     }
   });
 }; //敏捷分數計算 end
+//短衝清單start
 
+
+var sprintFlow = function sprintFlow() {
+  var sprintCardDOM = document.querySelector(".sprintCard");
+  var sprintBacklogDOM = document.querySelector(".sprintBacklog");
+  var btnOk = document.querySelector(".btnOk");
+
+  var isArrEqual = function isArrEqual(arr1, arr2) {
+    return arr1.join("") === arr2.join("") ? true : false;
+  };
+
+  var answerAry = ["1", "2", "3"];
+  var sprintCard = Sortable.create(sprintCardDOM, {
+    group: "shart",
+    animation: 500
+  });
+  var sprintBacklog = Sortable.create(sprintBacklogDOM, {
+    group: "shart",
+    onSort: function onSort() {
+      var answerMessage = document.querySelector(".message");
+      var order = sprintBacklog.toArray();
+      console.log(order);
+      var answerrr = isArrEqual(order, answerAry); // true
+
+      if (answerrr === true) {
+        // 答對彈跳視窗 start
+        var modalTestOk = document.querySelector(".modal__test--ok");
+        addClass(btnOk, "bg-secondary");
+        btnOk.addEventListener("click", function (e) {
+          e.preventDefault();
+          addClass(modalTestOk, "open");
+        }); // 答對彈跳視窗 end
+      } else {
+        // 答錯彈跳視窗 start
+        var modalTestWrong = document.querySelector(".modal__test--wrong");
+        btnOk.addEventListener("click", function (e) {
+          e.preventDefault(); // addClass(modalTestWrong,"open");
+        }); // 答錯彈跳視窗 end
+      }
+    }
+  });
+};
+
+sprintFlow();
 
 if (candidateDOM) {
   dragGame();
