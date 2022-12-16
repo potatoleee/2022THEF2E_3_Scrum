@@ -179,6 +179,56 @@ let backlogSortableObj = Sortable.create(backlogDOM, {
 
 }//敏捷分數計算 end
 
+//短衝清單start
+
+const sprintFlow = () =>{
+  const sprintCardDOM = document.querySelector(".sprintCard");
+  const sprintBacklogDOM = document.querySelector(".sprintBacklog");
+  const btnOk = document.querySelector(".btnOk");
+  const isArrEqual = (arr1, arr2) => {
+    return arr1.join("") === arr2.join("") ? true : false;
+  };
+  const answerAry = ["1", "2", "3"];
+
+  var sprintCard = Sortable.create(sprintCardDOM, { 
+    group: "shart",
+    animation: 500
+  });
+
+  var sprintBacklog = Sortable.create(sprintBacklogDOM, {
+    group: "shart",
+    onSort: () => {
+      const answerMessage = document.querySelector(".message");
+      let order = sprintBacklog.toArray();
+      console.log(order);
+      const answerrr = isArrEqual(order, answerAry); // true
+      if (answerrr === true) {
+        
+          // 答對彈跳視窗 start
+          const modalTestOk = document.querySelector(".modal__test--ok");
+          addClass(btnOk,"bg-secondary")
+          btnOk.addEventListener("click",function(e){
+          e.preventDefault();
+          addClass(modalTestOk,"open"); 
+        })
+      // 答對彈跳視窗 end
+      } else {
+          // 答錯彈跳視窗 start
+          const modalTestWrong = document.querySelector(".modal__test--wrong");
+          btnOk.addEventListener("click",function(e){
+          e.preventDefault();
+          // addClass(modalTestWrong,"open");
+          })
+        // 答錯彈跳視窗 end
+
+      }
+    }
+  });
+
+}
+sprintFlow()
+
+
 if(candidateDOM){
   dragGame()
 }
